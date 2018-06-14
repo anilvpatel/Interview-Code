@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Find GCD of Two Number</h2>
+<script>
+ 
+ var a = Number(prompt("Enter \"A\" number"));
+ var b = Number(prompt("Enter \"B\" number"));
+ 
+ if ( b > a)   // 6 > 4
+ {  
+      a = Number(a + b); // a=10 b=6       
+      b = Number(a - b);   // b=4 a=10 
+      a = Number(a - b);  // a=6 b=4
+ }
+  
+ var c;
+ gcd(a,b);
+ 
+function gcd(a,b){
+  var n1 = a;
+  var n2 = b;  
+  if(n1 > n2 && b !== 0){
+     gcd(n2, n1%n2);  
+  }
+  else{
+     c = n1;
+  }
+}
+
+var d = Number((a*b)/c);
+
+alert ("LCM of a="+a+" &b="+b+" is equal to "+d);
+alert ("GCD of a="+a+" &b="+b+" is equal to "+c);   
+</script>
+
+</body>
+</html>
